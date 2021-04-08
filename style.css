@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+body {
+  font-family: 'Syne Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color:black;
+  background-color: paleturquoise;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  width: auto;
+  padding: 30px;
+  font-size: 30px;
+}
+
+video {
+  width: 44vw;
+  height: 34vw;
+  margin: 1rem;
+  background: black;
+}
+
+.videos {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-action-div {
+  position: absolute;
+  align-items: center;
+  bottom: 10px;
+}
+
+.buttons {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width:100%;
+  align-items: center;
+}
+
+.doc-notes {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width:100%;
+  align-items: center;
+}

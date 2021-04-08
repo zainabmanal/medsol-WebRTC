@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <title>Patient's Side</title>
+  </head>
+  
+  <body>
+    <h1>Patient Side</h1>
+    <div class="videos">
+      <span>
+        <h3>Local Stream</h3>
+        <video id="webcamVideo" autoplay playsinline></video>
+      </span>
+
+      <span>
+        <h3>Remote Stream</h3>
+        <video id="remoteVideo" autoplay playsinline></video>
+      </span>
+
+    </div>
+
+    <button id="muteAudio">Mute Audio</button>
+    <button id="muteVideo">Mute Video</button>
+
+    <br>
+    <br>
+
+    <button id="webcamButton">Start webcam</button>
+
+    <h2>Join a Call</h2>
+    <input id="callInput" />
+    <button id="answerButton" >Answer</button>
+
+
+    <button id="hangupButton" >Hangup</button>
+    <br>
+    <br>
+    <button id="goBackPat" onclick="window.location.replace('/patDash.html')">Patient Dashboard</button>
+
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/patient.js"></script>
+
+  </body>
+</html>

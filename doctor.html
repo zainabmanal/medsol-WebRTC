@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <title>Doctor's Side</title>
+  </head>
+
+
+  <body>
+
+<div class="grid-container">
+  <div class="videos">
+      
+    <span>
+      <video id="webcamVideo" autoplay playsinline></video>
+    </span>
+      
+    <span>
+      <video id="remoteVideo" autoplay playsinline></video>
+    </span>
+           
+    <div class="call-action-div">
+        <button id="muteAudio">Mute Audio</button>
+        <button id="muteVideo">Mute Video</button>
+        <button id="hangupButton" >Hangup</button>
+    </div>
+
+  </div>
+  
+  <div class="buttons">
+        <br>
+        <button id="webcamButton">Start webcam</button>
+        
+        <button id="callButton" disabled >Create Call (offer)</button>
+        <input id="callInput" />
+        <input type="button" value="Send Code" onclick="sendEmail()"/>
+
+      <div style="display: none;">
+        <label id="codeOff"></label>
+        <h2>3. Join a Call</h2>
+        <p>Answer the call from a different browser window or device</p>
+        <button id="answerButton" disabled>Answer</button>
+      </div>   
+  </div>
+
+  <!--Added Doctor's Notes-->
+  <div class="doc-notes">
+    <form>
+      <p class="full">
+        <h2>Notes</h2>
+        <span>
+          Note ID
+          <input id="noteID"/>
+        </span>
+        <textarea id="notes" cols="30" rows="10" style="width: 100%;"></textarea>
+      </p>
+      <p class="full">
+        <button id="submit">Submit</button>
+      </p>
+    </form>
+    <button id="goBackDoc" onclick="window.location.replace('/docDash.html')">Doctor Dashboard</button>
+  </div>
+
+</div>  
+    <script type="module" src="/main.js"></script>
+
+    <script type="text/javascript">
+        function sendEmail(){
+          //const showNote = document.getElementById('showNote');
+          //showNote.innerHTML = document.getElementById(noteID).value;
+
+          const code = codeOff.innerHTML;
+
+          //Send email 
+          Email.send({
+              Host : "smtp.gmail.com",
+              Username : "ramin.sami@ontariotechu.net",
+              Password : "agiwewirvytgplco",
+              To : 'mayuma1634@gmail.com',
+              From : "ramin.sami@ontariotechu.net",
+              Subject : "Code for Call",
+              Body : "The code is: " + code
+          }).then(
+            message => alert(message)
+          );
+        }
+    </script>
+  </body>
+</html>

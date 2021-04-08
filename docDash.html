@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+        <title>Dcotor Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+    <div class="container mt-5">
+        <table class="table table-dark text-white">
+            <thead>
+                <th>Date</th>
+                <th>Patient</th>
+                <th>Time</th>
+                <th>Reason</th>
+            </thead>
+
+            <tbody id="tbody1">
+                <tr>
+                    <td>April, 6, 2021</td>
+                    <td>Annabeth Chase</td>
+                    <td>3:55 pm   <button  onclick="window.location.replace('/doctor.html')">Join Room</button></td>
+                    <td id="tableNote"></td>
+                  </tr>
+
+                  <tr>
+                    <td>April, 5, 2021</td>
+                    <td>John Simmons</td>
+                    <td>2:00 pm   <button disabled>Join Room</button></td>
+                    <td id="tableNote"></td>
+                  </tr>
+
+                  <tr>
+                    <td>April, 5, 2021</td>
+                    <td> Edythe Lockwood </td>
+                    <td>2:30 pm   <button disabled>Join Room</button></td>
+                    <td id="tableNote"></td>
+                  </tr>
+
+                  <tr>
+                    <td>April, 2, 2021</td>
+                    <td>Annabeth Chase</td>
+                    <td>4:00 pm   <button disabled>Join Room</button></td>
+                    <td id="tableNote"></td>
+                  </tr>
+
+                  <tr>
+                    <td>April, 1, 2021</td>
+                    <td>Lillian Benbow </td>
+                    <td>1:00 pm   <button disabled>Join Room</button></td>
+                    <td id="tableNote"></td>
+                  </tr>
+
+            </tbody>
+        </table>
+    </div>
+   
+    <script type="module" src="/patDash.js"></script>
+    
+    </body>
+</html>
